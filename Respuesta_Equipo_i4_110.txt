@@ -1,0 +1,18 @@
+1- El color de la rama testing es BLUE.
+2- El color de la rama desarrollo es YELLOW.
+3- El color de fondo es BLUE y YELLOW.
+4- El favicon que quedo en el main es el de ALFA.
+5- ALFA, BETA, GAMMA tuvieron el mismo problema.
+6- Al hacer el push se tuvo que borrar las líneas de mas del vscode y volver a hacer el push.
+7- git pull origin TESTING
+ git add index.html
+git commit -m "Beta: resuelve conflicto uniendo los parrafos de ALFA y BETA"
+git push origin TESTING
+8- Si BETA hace push -f, borra el commit de ALFA. Si después GAMMA hace push -f, borra los commits de ALFA y de BETA
+9- Después de que los tres resolvieron sus conflictos y pushearon a TESTING, hay que mergear TESTING a DESARROLLO:
+bashgit checkout DESARROLLO
+git pull origin DESARROLLO
+git merge TESTING
+git add index.html
+git commit -m "Merge TESTING en DESARROLLO con los tres párrafos"
+git push origin DESARROLLO
